@@ -11,4 +11,4 @@ for i in `ls /www/wwwroot/logs/`;
 do
  rm -rf /www/wwwroot/logs/$i/container;
 done
-echo -e "\033[32m 【服务部署完成 SUCCESS】 \033[0m"
+echo -e "\033[32m 5.【服务部署完成 SUCCESS】 \033[0m"

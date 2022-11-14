@@ -53,6 +53,4 @@ RUN composer update -o && php bin/hyperf.php
 EXPOSE 9501
 EXPOSE 9502
 
-# 清除容器缓存
-ENTRYPOINT ["rm", "-rf", "/opt/www/runtime/container"]
 ENTRYPOINT ["php", "/opt/www/bin/hyperf.php", "start"]

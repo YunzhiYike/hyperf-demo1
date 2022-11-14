@@ -33,7 +33,7 @@ RUN set -ex \
         echo "memory_limit=1G"; \
         echo "date.timezone=${TIMEZONE}"; \
     } | tee conf.d/99_overrides.ini \
-    && echo "composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/" \
+    && composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/ \
     # - config timezone
     && ln -sf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
     && echo "${TIMEZONE}" > /etc/timezone \

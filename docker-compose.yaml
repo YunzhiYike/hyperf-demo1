@@ -1,10 +1,10 @@
 version: "1.0"
 services:
   web:
-    build: .
     ports:
       - "9501:9501"
       - "8501:8501"
     volumes:
       - /www/wwwroot/service1:/opt/www
     container_name: service1
+    build: .

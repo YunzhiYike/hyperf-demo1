@@ -26,6 +26,19 @@ return [
                 Event::ON_REQUEST => [Hyperf\HttpServer\Server::class, 'onRequest'],
             ],
         ],
+       [
+           'name' => 'tcp',
+           'type' => Server::SERVER_BASE,
+           'host' => '0.0.0.0',
+           'port' => 9504,
+           'sock_type' => SWOOLE_SOCK_TCP,
+           'callbacks' => [
+               Event::ON_RECEIVE => [App\Controller\TcpServer::class, 'onReceive'],
+           ],
+           'settings' => [
+               // 按需配置
+           ],
+       ],
     ],
     'settings' => [
         Constant::OPTION_ENABLE_COROUTINE => true,

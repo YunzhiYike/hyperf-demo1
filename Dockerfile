@@ -54,5 +54,5 @@ EXPOSE 9501
 EXPOSE 9502
 
 # 清除容器缓存
-RUN rm -rf /opt/www/runtime/container
+ENTRYPOINT ["rm", "-rf", "/opt/www/runtime/container"]
 ENTRYPOINT ["php", "/opt/www/bin/hyperf.php", "start"]

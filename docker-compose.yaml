@@ -5,6 +5,6 @@ services:
     ports:
       - "9501:9501"
       - "8501:9502"
-#    volumes:
-#      - /www/wwwroot/logs/service1:/opt/www/runtime/
+    volumes:
+      - /www/wwwroot/logs/service1:/opt/www/runtime/
     container_name: service1

@@ -51,5 +51,6 @@ COPY . /opt/www
 RUN composer update -o && php bin/hyperf.php
 
 EXPOSE 9501
+EXPOSE 9502
 
 ENTRYPOINT ["php", "/opt/www/bin/hyperf.php", "start"]

@@ -11,10 +11,14 @@ declare(strict_types=1);
  */
 namespace App\Controller;
 
+use Hyperf\Contract\StdoutLoggerInterface;
+use Hyperf\Utils\ApplicationContext;
+
 class IndexController extends AbstractController
 {
     public function index()
     {
+        ApplicationContext::getContainer()->get(StdoutLoggerInterface::class)->info("http请求一次");
         $user = $this->request->input('user', 'Hyperf');
         $method = $this->request->getMethod();
 

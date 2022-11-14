@@ -5,6 +5,4 @@ services:
     ports:
       - "9501:9501"
       - "8501:9502"
-    volumes:
-      - /www/wwwroot/server1:/opt/www
     container_name: service1

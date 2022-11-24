@@ -13,12 +13,14 @@ namespace App\Controller;
 
 use Hyperf\Contract\StdoutLoggerInterface;
 use Hyperf\Utils\ApplicationContext;
+use Hyperf\Utils\Codec\Json;
 
 class IndexController extends AbstractController
 {
     public function index()
     {
-        ApplicationContext::getContainer()->get(StdoutLoggerInterface::class)->info("http请求一次");
+        $headers = $this->request->getHeaders();
+        ApplicationContext::getContainer()->get(StdoutLoggerInterface::class)->info(Json::encode(compact('headers')));
         $user = $this->request->input('user', 'Hyperf');
         $method = $this->request->getMethod();
 

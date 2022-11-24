@@ -15,6 +15,7 @@ return [
             'class' => Monolog\Handler\RotatingFileHandler::class,
             'constructor' => [
                 'filename' => BASE_PATH . '/runtime/logs/log.log',
+//                'filename' => BASE_PATH . '/runtime/logs/log.log',
                 'level' => Monolog\Logger::DEBUG,
             ],
         ],
